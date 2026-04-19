@@ -66,7 +66,7 @@
       ```python
       for i in range(n):
             for j in range(n):
-               total += pattern[i][j] * filter[i]  [j]
+               total += pattern[i][j] * filter[i][j]
       ```
 
       1.  입력된 pattern과 filter를 함수 인자로 전달받습니다.
@@ -275,6 +275,10 @@
         Cross 점수: 4.0
         X 점수: 5.0
         판정: X | expected: X | PASS
+        --- size_5_7 ---
+        Cross 점수: 4.0
+        X 점수: 4.0
+        판정: UNDECIDED | expected: Cross | FAIL
         --- size_13_1 ---
         Cross 점수: 25.0
         X 점수: 1.0
@@ -309,6 +313,7 @@
         - size_5_3: 예상값 불일치: expected=X,        actual=Cross
         - size_5_4: 예상값 불일치:        expected=Cross, actual=X
         - size_5_5: 예상값 불일치:        expected=Cross, actual=X
+        - size_5_7: 동점(UNDECIDED) 처리 규칙에 따라 FAIL
         - size_13_3: 예상값 불일치: expected=X,         actual=Cross
         - size_13_4: 예상값 불일치:         expected=Cross, actual=X
        ```
